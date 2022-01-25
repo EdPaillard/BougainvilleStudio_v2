@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAM;EACF,QAAQ,EAAE,QAAQ;EAClB,YAAS;IACL,QAAQ,EAAE,QAAQ;IAClB,GAAG,EAAE,GAAG;IACR,SAAS,EAAE,aAAa;;AAIhC,MAAO;EACH,UAAU,EAAE,IAAI",
+"sources": ["NewsCase.scss"],
+"names": [],
+"file": "NewsCase.css"
+}

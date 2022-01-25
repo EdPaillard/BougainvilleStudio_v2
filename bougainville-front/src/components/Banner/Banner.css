@@ -1,0 +1,18 @@
+.mr-20 {
+  margin-right: 20px; }
+
+.flex {
+  display: flex; }
+  .flex__fdc {
+    flex-direction: column; }
+  .flex__jcc {
+    justify-content: center; }
+  .flex__aic {
+    align-items: center; }
+  .flex__gap1 {
+    gap: 1rem; }
+
+.bg-cr {
+  background-color: red; }
+
+/*# sourceMappingURL=Banner.css.map */

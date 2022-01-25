@@ -1,0 +1,12 @@
+.news {
+    position: relative;
+    &__title {
+        position: absolute;
+        top: 25%;
+        transform: rotate(90deg);
+    }
+}
+
+.mt-5r {
+    margin-top: 5rem;
+}

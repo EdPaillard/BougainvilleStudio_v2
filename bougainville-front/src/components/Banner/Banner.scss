@@ -1,0 +1,23 @@
+.mr-20 {
+    margin-right: 20px;
+}
+
+.flex {
+    display: flex;
+    &__fdc {
+        flex-direction: column;
+    }
+    &__jcc {
+        justify-content: center;
+    }
+    &__aic {
+        align-items: center;
+    }
+    &__gap1 {
+        gap: 1rem;
+    }
+}
+
+.bg-cr {
+    background-color: red;
+}

@@ -1,0 +1,11 @@
+.news {
+  position: relative; }
+  .news__title {
+    position: absolute;
+    top: 25%;
+    transform: rotate(90deg); }
+
+.mt-5r {
+  margin-top: 5rem; }
+
+/*# sourceMappingURL=NewsCase.css.map */

@@ -1,0 +1,25 @@
+.separateBar {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3px;
+    background-color: white;
+}
+
+.listRS {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pulse {
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+.pb-1r {
+    padding-bottom: 1rem;
+}

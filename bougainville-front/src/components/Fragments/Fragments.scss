@@ -1,0 +1,10 @@
+.fragment {
+    &__mini {
+        height: 250px;
+        width: 250px;
+    }
+
+    &__container {
+        flex-wrap: wrap;
+    }
+}
