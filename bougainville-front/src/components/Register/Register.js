@@ -34,7 +34,8 @@ export default function Register() {
         }
         axios.post('http://localhost:5000/inscription', user)
         .then(res => {
-            if(res.statusText === 'OK') {
+            console.log(res);
+            if(res.statusText === 'Created') {
                 setResult(1);
             } else {
                 setResult(2);

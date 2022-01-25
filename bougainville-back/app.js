@@ -5,6 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 const usersRouter = require('./routes/userRouter');
 const fragsRouter = require('./routes/fragsRouter');
+const tropheesRouter = require('./routes/tropheesRouter');
 // const htmlRouter = require('./router/htmlRouter');
 
 //Connexion Database
@@ -27,7 +28,7 @@ app.use(cors());
 // app.use(htmlRouter);
 app.use(usersRouter);
 app.use(fragsRouter);
-
+app.use(tropheesRouter);
 
 
 module.exports = app;

@@ -4,12 +4,11 @@ const bcrypt = require('bcrypt');
 // User CRUD management
 exports.signup = async function(req,res){
     try {
-      console.log(req.body);
       const passHash = await bcrypt.hash(req.body.password, 10);
-      console.log(passHash);
       const users = await Users({
         pseudo: req.body.pseudo,
         email: req.body.email,
+        profilimg: 'profil_pic.png',
         password: passHash,
       });
       users.save();
@@ -29,17 +28,14 @@ exports.login = async (req, res) => {
 
     res.status(200).json(user._id);
   } catch (error) {
-    console.trace(error);
     res.status(500).json({ error });
   }
 }
 
 exports.getUser = async (req, res) => {
   try {
-    console.log(req.params);
     const user = await Users.findById(req.params.id);
-    console.log(user);
-      res.status(200).json(user);
+    res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ error });
   }
@@ -47,9 +43,7 @@ exports.getUser = async (req, res) => {
 
 exports.checkAdmin = async (req, res) => {
   try {
-    console.log(req.params);
     const user = await Users.findById(req.params.id);
-    console.log(user);
     if(user.email === 'ed.paillard@gmail.com') {
       res.status(200).json('ADMIN_OK');
     } else {
@@ -58,4 +52,13 @@ exports.checkAdmin = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error });
   }
+}
+
+exports.userEdit = async (req, res) => {
+  try {
+    Users.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet modifié !'}))
+} catch (error) {
+    res.status(400).json({error});
+}
 }

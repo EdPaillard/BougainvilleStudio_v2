@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import CloseButton from 'react-bootstrap/CloseButton';
 import Alert from 'react-bootstrap/Alert';
 
-export default function AdminPost() {
+export default function AdminPost({ setUpload }) {
 
     const [title, setTitle] = useState();
     const [description, setDescription] = useState();
@@ -34,7 +34,7 @@ export default function AdminPost() {
 
   return <div>
       <Container className='mt-2r bc-w'>
-      <CloseButton />
+      <Button className='mb-3' variant="light" onClick={() => setUpload(false)}>&#60; Retour</Button>
             <Form onSubmit={(event) => handleSubmit(event)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className='text-white'>Titre</Form.Label>

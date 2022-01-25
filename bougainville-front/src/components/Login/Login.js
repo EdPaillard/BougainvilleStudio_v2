@@ -39,7 +39,7 @@ export default function Login() {
     }
 
   return (<>
-        <Banner />
+        <Banner isLogged={isLogged} />
         <Container className='h-100vh mt-2r bc-w'>
             <Form onSubmit={(event) => handleSubmit(event)}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">

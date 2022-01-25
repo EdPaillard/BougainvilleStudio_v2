@@ -3,10 +3,11 @@ import axios from 'axios';
 
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 import AdminFrag from '../AdminFrag/AdminFrag';
 
-export default function AdminPutDelete() {
+export default function AdminPutDelete({ setPut }) {
 
     const [frags, setFrags] = useState([]);
     
@@ -19,6 +20,7 @@ export default function AdminPutDelete() {
     }, []);
     
   return <Container className='mt-5r'>
+      <Button className='mb-3' variant="light" onClick={() => setPut(false)}>&#60; Retour</Button>
       {frags ? (<Table responsive striped bordered hover variant="dark">
         <thead>
             <tr>

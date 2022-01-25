@@ -3,14 +3,16 @@
   margin-left: auto;
   margin-right: auto;
   height: 3px;
-  background-color: white; }
+  background-color: white;
+  margin-bottom: 1rem; }
 
 .listRS {
   display: flex;
   justify-content: space-evenly;
   width: 30%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 0; }
 
 .pulse:hover {
   transform: scale(1.3); }

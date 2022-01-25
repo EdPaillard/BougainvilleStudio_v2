@@ -6,15 +6,24 @@ import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import './Banner.css';
+import axios from 'axios';
 
-export default function Banner() {
+export default function Banner({ isLogged} ) {
 
-    const [profilPic, setProfilPic] = useState('/profil_pic.png');
-    const [userId, setUserId] = useState(null); 
+    const [profilPic, setProfilPic] = useState('profil_pic.png');
+    const [userId, setUserId] = useState(sessionStorage.getItem('id')); 
 
     useEffect(() => {
         setUserId(sessionStorage.getItem('id'));
-    }, [])
+    }, [isLogged])
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/user/${userId}`)
+        .then(res => {
+        console.log(res);
+        setProfilPic(res.data.profilimg)
+        });
+    }, [isLogged])
 
   return (<Navbar bg="dark" variant='dark' expand='lg'>
             <Container>
@@ -63,11 +72,11 @@ export default function Banner() {
                 </Nav>
                 </Navbar.Collapse>
                 <Nav>
-                {userId === null ? (<NavDropdown title={<img alt='User PP' src={profilPic} />} id="basic-nav-dropdown">
+                {userId === null ? (<NavDropdown title={<img className='userPP' alt='User PP' src={`/userPictures/${profilPic}`} />} id="basic-nav-dropdown">
                         <NavDropdown.Item href="/register">Créer un compte</NavDropdown.Item>
                         <NavDropdown.Item href="/login">Se connecter</NavDropdown.Item>
                     </NavDropdown>) : 
-                    (<NavDropdown title={<img alt='User PP' src={profilPic} />} id="basic-nav-dropdown">
+                    (<NavDropdown title={<img className='userPP' alt='User PP' src={`/userPictures/${profilPic}`} />} id="basic-nav-dropdown">
                         <NavDropdown.Item href={`/profil/${userId}`}>Profil</NavDropdown.Item>
                         <NavDropdown.Item href="/" className='bg-cr' onClick={() => sessionStorage.clear()}>Déconnexion</NavDropdown.Item>
                     </NavDropdown>)}

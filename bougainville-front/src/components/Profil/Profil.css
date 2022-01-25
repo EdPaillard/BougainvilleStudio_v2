@@ -1,0 +1,40 @@
+.profil {
+  position: relative; }
+  .profil__picture {
+    height: 164px;
+    width: 164px; }
+  .profil__edit {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .profil__pseudo {
+    color: white;
+    font-weight: 700; }
+  .profil__about__title {
+    color: white; }
+  .profil__about__body {
+    color: white; }
+
+.mt-1r {
+  margin-top: 1rem; }
+
+.ml-1r {
+  margin-left: 1rem; }
+
+.pl-1r {
+  padding-left: 1rem; }
+
+.mr-1r {
+  margin-right: 1rem; }
+
+.wrap {
+  flex-wrap: wrap; }
+
+.h-100 {
+  height: 100vw; }
+
+.bg__profil {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 0 1rem 0; }
+
+/*# sourceMappingURL=Profil.css.map */

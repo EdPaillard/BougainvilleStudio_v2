@@ -5,4 +5,8 @@
 .h-100vw {
   height: 100vw; }
 
+ul, p, h1, h2, h3, section, article {
+  margin: 0;
+  padding: 0; }
+
 /*# sourceMappingURL=App.css.map */
