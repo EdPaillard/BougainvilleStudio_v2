@@ -5,3 +5,23 @@
 .mt-2r {
     margin-top: 2rem;
 }
+
+.carrousel {
+    position: relative;
+    &__image {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+    }
+
+    &__mainhover {
+        transform: scale(1.0);
+        filter: blur(2px);
+    }
+    &__titre {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+}

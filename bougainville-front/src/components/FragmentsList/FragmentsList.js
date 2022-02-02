@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import Container from 'react-bootstrap/Container';
+
 import Fragments from '../Fragments/Fragments';
 import Banner from '../Banner/Banner';
+
+import './FragmentsList.css'
 
 export default function FragmentsList() {
 
@@ -13,16 +17,16 @@ export default function FragmentsList() {
     .then(res => {
       console.log(res.data);
       setFrags(res.data);
-      console.log(frags)
     })
   }, [])
 
-  return <>{frags ? (<div className='h-100vh'>
+  return <>{frags ? (<div className='h-100vh overflow-s'>
       <Banner />
 
+     <Container className='fragment__container flex flex__se flex__aic mt-2r'>
       {frags.map((frag) => {
-        return <Fragments key={frag._id} title={frag.title} description={frag.description} miniature={frag.miniature} content={frag.content} />
+        return <Fragments key={frag._id} id={frag._id} title={frag.title} miniature={frag.miniature} />
       })}
-  </div>) : null};
-  </>
+  </Container>
+  </div>) : null}</>;
 }

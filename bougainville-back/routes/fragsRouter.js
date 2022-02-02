@@ -5,6 +5,7 @@ const fragsContrl = require('../controller/fragsContrl');
 
 router.post('/fragments', fragsContrl.upload);
 router.get('/fragments', fragsContrl.getFrags);
+router.get('/fragments/read/:id', fragsContrl.getFrag);
 router.put('/fragment/modifier/:id', fragsContrl.modifyFrags);
 router.delete('/fragment/delete/:id', fragsContrl.deleteFrags);
 

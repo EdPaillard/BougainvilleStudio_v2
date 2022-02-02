@@ -12,6 +12,7 @@ import Home from "./components/Home/Home";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import Admin from "./components/Admin/Admin";
+import Fragment from "./components/Fragment/Fragment";
 
 import './styles/App.css';
 import AdminFragEdit from "./components/AdminFragEdit/AdminFragEdit";
@@ -34,6 +35,7 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/admin" element={<Admin />} />
         <Route exact path="/fragment/edit/:id" element={<AdminFragEdit />} />
+        <Route exact path="/fragment/:id" element={<Fragment />} />
       </Routes>        
     </div>
   )

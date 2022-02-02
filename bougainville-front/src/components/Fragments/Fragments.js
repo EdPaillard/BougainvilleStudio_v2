@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
 
-export default function Fragments({ title, description, miniature, content }) {
-  return <Container className='fragment__container flex flex__jcc flex__aic gap1'>
-      <Card className="bg-dark text-white fragment">
-        <Card.Img className='fragment__mini' src={`/fragsPictures/${miniature}`} alt="Frag image" />
+import './Fragments.css';
+
+export default function Fragments({ id, title, miniature, main, main__title, main__link, logoBougTrunc }) {
+
+  const [fragHover, setFragHover] = useState('');
+
+  return <a href={`/fragment/${id}`} className={`mb-5r fragment__link ${main__link}`} onMouseEnter={() => setFragHover('fragHover')} onMouseLeave={() => setFragHover('')}>
+      <Card className={`bg-dark text-white fragment ${main}`}>
+        <Card.Img className={`fragment__mini ${fragHover}`} src={`/fragsPictures/${miniature}`} alt="Frag image" />
         <Card.ImgOverlay>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>
-            {description}
-          </Card.Text>
-          <Card.Text>{content}</Card.Text>
+          {logoBougTrunc ? (<img className='fragment__logoboug' alt='logo_Boug_trunc' src='/logo_boug_trunc.png' />) : null}
+          <Card.Title className={`fragment__title ${main__title}`}>{title.toUpperCase()}</Card.Title>
         </Card.ImgOverlay>
       </Card>
-  </Container>;
+      </a>;
 }

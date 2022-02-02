@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import './Footer.css';
 
 export default function Footer() {
-  return <Container className='mt-2r pb-1r'>
+  return <Container className='mt-2r'>
       <div className='separateBar'></div>
             <ul className="listRS mt-2r">
                 <li className='pulse'><a href="https://twitter.com/Squallichon"><img  alt="Logo Twitter" className="imgRS" src="/twit_white.png" title="Follow sur Twitter !" /></a></li>

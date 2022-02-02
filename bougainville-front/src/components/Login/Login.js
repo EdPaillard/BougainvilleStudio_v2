@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -20,7 +21,7 @@ export default function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        
         const user = {
             pseudo: pseudo,
             email: email,
@@ -30,12 +31,18 @@ export default function Login() {
         .then(res => {
             if(res.statusText === 'OK'){
                 sessionStorage.setItem('id', res.data);
-                setIsLogged(1);
+                setIsLogged(1)
+                setTimeout(() => redirect(), 2000);
             } else {
                 setIsLogged(2);
             }
             console.log(res)});
+    }
 
+    const navigate = useNavigate()
+    const redirect = () => {
+        console.log('BLOP')
+        navigate('/');
     }
 
   return (<>

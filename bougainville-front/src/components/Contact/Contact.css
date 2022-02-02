@@ -1,0 +1,30 @@
+.contact__selectsection {
+  padding: 1rem; }
+.contact__listitem {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: white !important;
+  font-size: 2rem; }
+.contact__overlay {
+  position: relative; }
+.contact__container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-left: 7rem !important; }
+.contact__info {
+  color: white !important;
+  font-size: 2rem;
+  width: fit-content !important; }
+.contact__table {
+  width: auto !important; }
+
+.onHover {
+  border-bottom: 3px solid white !important;
+  font-weight: 800; }
+
+#bgdcolor {
+  background-color: rgba(0, 0, 0, 0) !important; }
+
+/*# sourceMappingURL=Contact.css.map */

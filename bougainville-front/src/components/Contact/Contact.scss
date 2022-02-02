@@ -1,0 +1,44 @@
+.contact {
+    
+    &__selectsection {
+        padding: 1rem;
+    }
+
+    &__listitem {
+        background-color: rgba($color: #000000, $alpha: 0.0) !important;
+        color: white !important;
+        font-size: 2rem;
+    }
+
+    &__overlay {
+        position: relative;
+    }
+
+    &__container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding-left: 7rem !important;
+    }
+
+    &__info {
+        color: white !important;
+        font-size: 2rem;
+        width: fit-content !important;
+    }
+
+    &__table {
+        width: auto !important;
+    }
+}
+
+.onHover {
+    border-bottom: 3px solid white !important;
+    font-weight: 800;
+}
+
+#bgdcolor {
+    background-color: rgba($color: #000000, $alpha: 0.0) !important;
+}

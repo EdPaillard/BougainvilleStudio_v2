@@ -18,6 +18,7 @@ export default function Banner({ isLogged} ) {
     }, [isLogged])
 
     useEffect(() => {
+        if(!userId) return;
         axios.get(`http://localhost:5000/user/${userId}`)
         .then(res => {
         console.log(res);
@@ -25,7 +26,7 @@ export default function Banner({ isLogged} ) {
         });
     }, [isLogged])
 
-  return (<Navbar bg="dark" variant='dark' expand='lg'>
+  return (<Navbar variant='dark' expand='lg' className='navBar'>
             <Container>
                 <Navbar.Brand className='mr-20 flex flex__jcc flex__aic flex__gap1' href="/">
                 <img

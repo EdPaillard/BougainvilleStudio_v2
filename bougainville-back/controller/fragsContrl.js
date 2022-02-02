@@ -18,6 +18,16 @@ exports.upload = async (req, res) => {
     }
 }
 
+exports.getFrag = async (req, res) => {
+    try {
+        console.log(req.params.id)
+        const frag = await Frags.findById(req.params.id);
+        res.status(200).json(frag);
+    } catch (error) {
+        res.status(400).json({error});
+    }
+}
+
 exports.getFrags = async (req, res) => {
     try {
         const frags = await Frags.find({});

@@ -16,6 +16,12 @@
     &__gap1 {
         gap: 1rem;
     }
+    &__se {
+        justify-content: space-evenly;
+    }
+    &__sb {
+        justify-content: space-between;
+    }
 }
 
 .bg-cr {
@@ -25,4 +31,8 @@
 .userPP {
     height: 50px;
     width: 50px;
+}
+
+.navBar {
+    background-color: black !important;
 }

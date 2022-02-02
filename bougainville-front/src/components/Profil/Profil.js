@@ -6,6 +6,9 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Banner from '../Banner/Banner';
 import Alert from 'react-bootstrap/Alert';
+import CloseButton from 'react-bootstrap/CloseButton';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 import Trophy from '../Trophy/Trophy';
 import ProfilEdit from '../ProfilEdit/ProfilEdit';
@@ -54,16 +57,23 @@ export default function Profil() {
 
   return <>
     {user ? (
-    <div className='h-100'>
+    <div className='h-100vh overflow-s'>
       <Banner />
       {!edit ? (<Container className='profil mt-2r'>
         <Button className='profil__edit' variant="light" onClick={() => setEdit(true)}>Editer le profil</Button>
         <div className='flex'>
-        {!editPic ? (<Image className='profil__picture cursor' alt='Profil Picture' src={`/userPictures/${user.profilimg}`} onClick={() => setEditPic(true)} />) : (
-          <Form.Group className="mb-3 text-white">
-          <Form.Label>Image de profil</Form.Label>
+        {!editPic ? (
+        <OverlayTrigger
+          placement="bottom"
+          delay={{ show: 250, hide: 400 }}
+          overlay={<Tooltip id="button-tooltip" >Cliquer pour modifier</Tooltip>}
+        ><Image className='profil__picture cursor' alt='Profil Picture' src={`/userPictures/${user.profilimg}`} onClick={() => setEditPic(true)} />
+        </OverlayTrigger>) : (
+          <Form.Group className="mb-3 text-white" >
+            <CloseButton variant='white' className='mb-3' onClick={() => setEditPic(false)}/>
+          <Form.Label className='ml-1r'>Image de profil</Form.Label>
           <Form.Control type='file' onChange={(event) => setProfilPic(event.target.files[0].name)}></Form.Control>
-          <Button onClick={() => handleEditPic()}>Modifier</Button>
+          <Button className='mt-1r' onClick={() => handleEditPic()}>Modifier</Button>
           {success ? (<Alert className='mt-2r' variant='success'>
                             Edition réussie ! 
                         </Alert>) : null}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -37,11 +38,17 @@ export default function Register() {
             console.log(res);
             if(res.statusText === 'Created') {
                 setResult(1);
+                setTimeout(() => redirect(), 2000);
             } else {
                 setResult(2);
             }
         });
+    }
 
+    const navigate = useNavigate()
+    const redirect = () => {
+        console.log('BLOP')
+        navigate('/login');
     }
 
   return (<>
@@ -72,7 +79,7 @@ export default function Register() {
                 </Button>) : (<Button variant="primary" type="submit" disabled >
                     S'inscrire
                 </Button>) }
-                {warn ? (<Alert variant='warning'>
+                {warn ? (<Alert variant='warning' className='mt-2r'>
                     {warn}
                 </Alert>) : null}
                 {result === 1 ? (<Alert className='mt-2r' variant='success'>

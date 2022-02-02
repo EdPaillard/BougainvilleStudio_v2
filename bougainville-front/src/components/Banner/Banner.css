@@ -11,6 +11,10 @@
     align-items: center; }
   .flex__gap1 {
     gap: 1rem; }
+  .flex__se {
+    justify-content: space-evenly; }
+  .flex__sb {
+    justify-content: space-between; }
 
 .bg-cr {
   background-color: red; }
@@ -18,5 +22,8 @@
 .userPP {
   height: 50px;
   width: 50px; }
+
+.navBar {
+  background-color: black !important; }
 
 /*# sourceMappingURL=Banner.css.map */
