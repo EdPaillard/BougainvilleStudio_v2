@@ -2,7 +2,6 @@ const Frags = require('../models/fragments');
 
 exports.upload = async (req, res) => {
     try {
-        console.log(req.body);
         const frag = await Frags ({
             title: req.body.title,
             description: req.body.description,
@@ -20,7 +19,6 @@ exports.upload = async (req, res) => {
 
 exports.getFrag = async (req, res) => {
     try {
-        console.log(req.params.id)
         const frag = await Frags.findById(req.params.id);
         res.status(200).json(frag);
     } catch (error) {
@@ -31,7 +29,6 @@ exports.getFrag = async (req, res) => {
 exports.getFrags = async (req, res) => {
     try {
         const frags = await Frags.find({});
-        console.log(frags);
         res.status(200).json(frags);
     } catch (error) {
         res.status(400).json({error});

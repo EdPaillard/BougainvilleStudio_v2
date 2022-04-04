@@ -1,10 +1,34 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 import Banner from '../Banner/Banner';
+import Footer from '../Footer/Footer';
+import HeroesScene from '../HeroesScene/HeroesScene';
 
 export default function Heroes() {
+
+  const [scene, setScene] = useState()
+
+  useEffect(() => {
+    axios.get(`http://localhost:5000/heroes/scene/${1}`)
+    .then(res => {
+      console.log(res);
+      setScene(res.data[0]);
+    });
+  }, [])
+
   return <div className='h-100vh overflow-s'>
       <Banner />
-      <h1 className='text-white mt-5r ml-1r'>Bientôt en ligne...</h1>
+
+      {scene ? (<HeroesScene 
+        id={scene._id} 
+        background={scene.background} 
+        PNJPicture={scene.PNJPicture} 
+        PNJSentence={scene.PNJSentence} 
+        option1={scene.option1} 
+        option2={scene.option2} 
+        option3={scene.option3}
+      />) : null}
+      <Footer />
   </div>;
 }

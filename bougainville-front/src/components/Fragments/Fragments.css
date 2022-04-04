@@ -14,17 +14,25 @@
   .fragment__title {
     transform: rotate(90deg);
     position: absolute;
-    top: 160px;
-    left: -75px;
+    top: 0;
+    left: -0;
     font-size: 4rem !important;
-    padding-bottom: 4px; }
-  .fragment__logoboug {
-    position: absolute;
-    right: 0;
-    top: 120px; }
+    padding-bottom: 4px;
+    width: 100%; }
   .fragment__link {
     width: fit-content;
     height: fit-content; }
+  .fragment__para {
+    margin-top: calc(100% - 4.5rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: 100%; }
+  .fragment__overlay {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 !important; }
 
 .fragHover {
   transform: scale(1);
@@ -34,11 +42,22 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box; }
-  .main__title {
-    position: absolute;
-    top: 230px; }
   .main__link {
     width: 45%; }
+
+.timeFrag {
+  height: 100px;
+  width: 100px;
+  margin-top: 1rem;
+  border: 5px solid white !important; }
+  .timeFrag__image {
+    height: 100%; }
+  .timeFrag__header {
+    font-size: small;
+    padding: 2px !important; }
+
+.borderColor {
+  border-color: green !important; }
 
 .mb-5r {
   margin-bottom: 5rem; }

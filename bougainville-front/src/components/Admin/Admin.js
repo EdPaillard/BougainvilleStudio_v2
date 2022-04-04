@@ -9,6 +9,7 @@ import Banner from '../Banner/Banner';
 import AdminPost from '../AdminPost/AdminPost';
 import AdminPutDelete from '../AdminPutDelete/AdminPutDelete';
 import AdminTrophees from '../AdminTrophees/AdminTrophees';
+import AdminScene from '../AdminScene/AdminScene';
 
 import './Admin.css';
 
@@ -20,6 +21,7 @@ export default function Admin() {
     const [upload, setUpload] = useState(false);
     const [put, setPut] =useState(false);
     const [trophy, setTrophy] = useState(false);
+    const [scene, setScene] = useState(false);
 
     useEffect(() => {
         
@@ -40,6 +42,7 @@ export default function Admin() {
             {!upload ? (<ListGroup.Item className='cursor' onClick={() => {setUpload(true); setPut(false)}} >Upload Frag</ListGroup.Item>) : (<AdminPost setUpload={setUpload} />)}
             {!put ? (<ListGroup.Item className='cursor mt-5r' onClick={() => {setPut(true); setUpload(false)}} >Modifier Frag</ListGroup.Item>) : (<AdminPutDelete setPut={setPut} />)}
             {!trophy ? (<ListGroup.Item className='cursor mt-5r' onClick={() => {setTrophy(true); setUpload(false)}} >Test trophées</ListGroup.Item>) : (<AdminTrophees setTrophy={setTrophy} />)}
+            {!scene ? (<ListGroup.Item className='cursor mt-5r' onClick={() => {setScene(true); setUpload(false)}} >Create Scene</ListGroup.Item>) : (<AdminScene setScene={setScene} />)}
         </ListGroup>
       </Container>
   </div>) : (<div className='h-100vh'>

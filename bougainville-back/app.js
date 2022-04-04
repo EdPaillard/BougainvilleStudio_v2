@@ -6,10 +6,12 @@ require('dotenv').config();
 const usersRouter = require('./routes/userRouter');
 const fragsRouter = require('./routes/fragsRouter');
 const tropheesRouter = require('./routes/tropheesRouter');
-// const htmlRouter = require('./router/htmlRouter');
+const timelineRouter = require('./routes/timelineRouter');
+const heroesRouter = require('./routes/heroesRouter');
+
 
 //Connexion Database
-mongoose.connect(`mongodb+srv://${process.env.MONGOOSE_ID}:${process.env.MONGOOSE_PWD}@bougainvilledb.zsiio.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+const connexion = mongoose.connect(`mongodb+srv://${process.env.MONGOOSE_ID}:${process.env.MONGOOSE_PWD}@bougainvilledb.zsiio.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -29,6 +31,8 @@ app.use(cors());
 app.use(usersRouter);
 app.use(fragsRouter);
 app.use(tropheesRouter);
+app.use(timelineRouter);
+app.use(heroesRouter);
 
 
 module.exports = app;

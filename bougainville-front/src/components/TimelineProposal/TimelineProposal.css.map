@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,wBAAS;EACL,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK",
+"sources": ["TimelineProposal.scss"],
+"names": [],
+"file": "TimelineProposal.css"
+}

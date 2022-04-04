@@ -11,6 +11,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 import Trophy from '../Trophy/Trophy';
+import ProfilTimeline from '../ProfilTimeline/ProfilTimeline';
 import ProfilEdit from '../ProfilEdit/ProfilEdit';
 import Footer from '../Footer/Footer';
 
@@ -26,11 +27,11 @@ export default function Profil() {
   const [success, setSuccess] = useState(false);
   const [erreur, setErreur] = useState(false);
   const [trophees, setTrophees] = useState();
+  const [timelines, setTimelines] = useState([]);
 
   useEffect(() => {
     axios.get(`http://localhost:5000/user/${id}`)
     .then(res => {
-      console.log(res);
       setUser({pseudo: res.data.pseudo, profilimg: res.data.profilimg, age: res.data.age, email: res.data.email, ville: res.data.ville, about: res.data.about})
     });
 
@@ -38,6 +39,12 @@ export default function Profil() {
     .then(res => {
       setTrophees(res.data);
     });
+
+    axios.get(`http://localhost:5000/timelines/display/${id}`)
+    .then(res => {
+      console.log(res.data);
+      setTimelines(res.data);
+    })
   }, [])
 
   const handleEditPic = () => {
@@ -97,6 +104,14 @@ export default function Profil() {
           <Container className='flex text-white wrap'>
           {trophees ? (trophees.map(trophy => {
             return <Trophy key={trophy._id} date={trophy.date} entitle={trophy.entitle} resume={trophy.resume} picture={trophy.picture} userId={trophy.userId} />
+          })) : null}
+          </Container>
+        </section>
+        <section className='profil__about mt-2r bg__profil'>
+          <h1 className='profil__about__title'><img alt='timeline_icon' src='/timeline_icon.png' className='mr-1r' />Les lignes du temps</h1>
+          <Container className='flex text-white wrap'>
+          {timelines ? (timelines.map(timeline => {
+            return <ProfilTimeline key={timeline._id} title={timeline.title} content={timeline.content} />
           })) : null}
           </Container>
         </section>

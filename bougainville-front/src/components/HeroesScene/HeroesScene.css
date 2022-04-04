@@ -1,0 +1,26 @@
+.heroes__container {
+  height: 70%;
+  display: grid;
+  grid-template-columns: 25% 40% 25%;
+  grid-template-rows: 25% 40% 25%;
+  grid-gap: 5%; }
+.heroes__background {
+  position: relative; }
+.heroes__PNJPicture {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+.innerGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bg-color {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  text-align: center; }
+
+/*# sourceMappingURL=HeroesScene.css.map */
