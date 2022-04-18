@@ -35,4 +35,6 @@ You can now navigate on the site on
 http://localhost:3000
 ```
 
+### Deploy version WIP
+    
 # Have fun !
