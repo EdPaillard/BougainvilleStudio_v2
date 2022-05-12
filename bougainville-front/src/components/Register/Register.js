@@ -33,7 +33,7 @@ export default function Register() {
             email: email,
             password: password
         }
-        axios.post('http://localhost:5000/inscription', user)
+        axios.post('http://162.19.66.30:5000/inscription', user)
         .then(res => {
             console.log(res);
             if(res.statusText === 'Created') {

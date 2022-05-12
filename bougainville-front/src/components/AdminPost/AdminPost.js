@@ -24,7 +24,7 @@ export default function AdminPost({ setUpload }) {
             content: content
         }
 
-        axios.post('http://localhost:5000/fragments', obj)
+        axios.post('http://162.19.66.30:5000/fragments', obj)
         .then(res => {
             if(res.statusText === 'Created') { 
                 setResult(true);

@@ -12,7 +12,7 @@ export default function AdminPutDelete({ setPut }) {
     const [frags, setFrags] = useState([]);
     
     useEffect(() => {
-        axios.get('http://localhost:5000/fragments')
+        axios.get('http://162.19.66.30:5000/fragments')
         .then(res => {
             console.log(res.data);
             setFrags(res.data);

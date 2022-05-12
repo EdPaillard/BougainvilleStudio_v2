@@ -10,13 +10,13 @@ export default function AdminTrophees({ setTrophy }) {
   const [trophees, setTrophees] = useState();
 
   const handleGetOne = () => {
-    axios.get(`http://localhost:5000/trophees/${id}/${trophees[0]._id}`)
+    axios.get(`http://162.19.66.30:5000/trophees/${id}/${trophees[0]._id}`)
     .then(res => console.log(res));
 
   }
 
   const handleGetAll = () => {
-    axios.get(`http://localhost:5000/trophees/${id}`)
+    axios.get(`http://162.19.66.30:5000/trophees/${id}`)
     .then(res => {
       console.log(res)
       setTrophees(res.data);
@@ -32,7 +32,7 @@ export default function AdminTrophees({ setTrophy }) {
       date: new Date()
     }
 
-    axios.post('http://localhost:5000/trophees/success', obj)
+    axios.post('http://162.19.66.30:5000/trophees/success', obj)
     .then(res => console.log(res));
   }
 

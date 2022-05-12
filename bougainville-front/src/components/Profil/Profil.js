@@ -30,17 +30,17 @@ export default function Profil() {
   const [timelines, setTimelines] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/user/${id}`)
+    axios.get(`http://162.19.66.30:5000/user/${id}`)
     .then(res => {
       setUser({pseudo: res.data.pseudo, profilimg: res.data.profilimg, age: res.data.age, email: res.data.email, ville: res.data.ville, about: res.data.about})
     });
 
-    axios.get(`http://localhost:5000/trophees/${id}`)
+    axios.get(`http://162.19.66.30:5000/trophees/${id}`)
     .then(res => {
       setTrophees(res.data);
     });
 
-    axios.get(`http://localhost:5000/timelines/display/${id}`)
+    axios.get(`http://162.19.66.30:5000/timelines/display/${id}`)
     .then(res => {
       console.log(res.data);
       setTimelines(res.data);
@@ -51,7 +51,7 @@ export default function Profil() {
     const obj = {
       profilimg: profilPic
     }
-    axios.put(`http://localhost:5000/user/edit/${id}`, obj)
+    axios.put(`http://162.19.66.30:5000/user/edit/${id}`, obj)
     .then(res => {
       if(res.statusText === 'OK') {
         setSuccess(true);

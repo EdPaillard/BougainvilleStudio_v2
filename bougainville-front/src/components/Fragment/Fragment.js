@@ -16,7 +16,7 @@ export default function Fragment() {
 
     useEffect(() => {
         console.log(id);
-        axios.get(`http://localhost:5000/fragments/read/${id}`)
+        axios.get(`http://162.19.66.30:5000/fragments/read/${id}`)
         .then(res => {
             console.log(res)
             setFragment({ title: res.data.title, miniature: res.data.miniature, description: res.data.description, content: res.data.content });

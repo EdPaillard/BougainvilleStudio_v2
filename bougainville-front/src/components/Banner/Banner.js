@@ -19,7 +19,7 @@ export default function Banner({ isLogged} ) {
 
     useEffect(() => {
         if(!userId) return;
-        axios.get(`http://localhost:5000/user/${userId}`)
+        axios.get(`http://162.19.66.30:5000/user/${userId}`)
         .then(res => {
         console.log(res);
         setProfilPic(res.data.profilimg)

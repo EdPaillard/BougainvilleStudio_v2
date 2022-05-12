@@ -10,7 +10,7 @@ export default function Heroes() {
   const [scene, setScene] = useState()
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/heroes/scene/${1}`)
+    axios.get(`http://162.19.66.30:5000/heroes/scene/${1}`)
     .then(res => {
       console.log(res);
       setScene(res.data[0]);

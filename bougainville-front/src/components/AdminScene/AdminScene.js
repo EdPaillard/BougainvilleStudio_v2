@@ -15,7 +15,7 @@ export default function AdminScene({ setScene }) {
             saveScene: 2
         }
 
-        axios.post('http://localhost:5000/heroes/create/scene', obj)
+        axios.post('http://162.19.66.30:5000/heroes/create/scene', obj)
         .then(res => console.log(res))
     }
 

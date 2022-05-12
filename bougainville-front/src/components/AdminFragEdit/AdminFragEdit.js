@@ -20,7 +20,7 @@ export default function AdminFragEdit({ id, title, description, miniature, conte
           content: newContent
       }
 
-      axios.put(`http://localhost:5000/fragment/modifier/${id}`, obj)
+      axios.put(`http://162.19.66.30:5000/fragment/modifier/${id}`, obj)
       .then(res => {
         if(res.statusText === 'OK') {
           setEdit(true);

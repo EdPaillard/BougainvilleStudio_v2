@@ -27,7 +27,7 @@ export default function Login() {
             email: email,
             password: password
         }
-        axios.post('http://localhost:5000/login', user)
+        axios.post('http://162.19.66.30:5000/login', user)
         .then(res => {
             if(res.statusText === 'OK'){
                 sessionStorage.setItem('id', res.data);

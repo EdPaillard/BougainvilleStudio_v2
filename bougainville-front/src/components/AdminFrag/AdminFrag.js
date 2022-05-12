@@ -14,7 +14,7 @@ export default function AdminFrag({ id, title, description, miniature, content }
     const [edit, setEdit] = useState(false);
 
     const handleSupprClick = () => {
-        axios.delete(`http://localhost:5000/fragment/delete/${id}`)
+        axios.delete(`http://162.19.66.30:5000/fragment/delete/${id}`)
         .then(res => {
             if(res.statusText === 'OK') {
                 setDelete(true);

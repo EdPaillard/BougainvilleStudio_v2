@@ -25,7 +25,7 @@ export default function Admin() {
 
     useEffect(() => {
         
-        axios.get(`http://localhost:5000/adminauth/${id}`)
+        axios.get(`http://162.19.66.30:5000/adminauth/${id}`)
         .then(res => {
             console.log(res.data);
             if(res.data === 'ADMIN_OK') {

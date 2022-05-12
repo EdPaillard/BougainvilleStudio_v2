@@ -32,7 +32,7 @@ export default function Timeline() {
     } else {
       setIds(oldIds => [...oldIds, id]);
 
-      axios.get(`http://localhost:5000/fragments/read/${id}`)
+      axios.get(`http://162.19.66.30:5000/fragments/read/${id}`)
       .then(res => {
         setTimeline(oldData => [...oldData, { id: res.data._id, title: res.data.title, miniature: res.data.miniature, description: res.data.description, content: res.data.content }]);
       });
@@ -46,7 +46,7 @@ export default function Timeline() {
       content: timeline,
       userId: id
     }
-    axios.post('http://localhost:5000/timeline/fixed', obj)
+    axios.post('http://162.19.66.30:5000/timeline/fixed', obj)
     .then(res => {
       if(res.statusText === 'Created') {
         setTimeFixed(false);
@@ -58,7 +58,7 @@ export default function Timeline() {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:5000/fragments')
+    axios.get('http://162.19.66.30:5000/fragments')
     .then(res => {
       setFrags(res.data);
     })

@@ -19,7 +19,7 @@ export default function Home() {
     const [frags, setFrags] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/fragments')
+        axios.get('http://162.19.66.30:5000/fragments')
         .then(res => {
             console.log(res)
             setFrags(res.data);
