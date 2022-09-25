@@ -4,10 +4,12 @@ import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 
 import Banner from '../Banner/Banner';
-import Carrousel from '../Carrousel/Carrousel';
 import Fragments from '../Fragments/Fragments';
-import ShopCase from '../ShopCase/ShopCase';
 import Footer from '../Footer/Footer';
+import Presentation from '../Presentation/Presentation';
+import ArtistsList from '../ArtistsList/ArtistsList';
+// import Carrousel from '../Carrousel/Carrousel';
+// import ShopCase from '../ShopCase/ShopCase';
 
 import './Home.css';
 
@@ -28,15 +30,17 @@ export default function Home() {
 
     return ( <>
                 <Banner isLogged={isLogged} setIsLogged={setIsLogged} showLogin={showLogin} showRegister={showRegister} setShowLogin={setShowLogin} setShowRegister={setShowRegister} /> 
-                <div>
-                    <Carrousel />
+                <div className='h-100vh'>
+                    {/* <Carrousel /> */}
+                    <Presentation/>
                     <Container className='flex flex__sb mt-5r'>
                     {frags ? (<Fragments id={frags[0]._id} title={frags[0].title} miniature={frags[0].miniature} main={'main'} main__title={'main__title'} logoBougTrunc={'logo'} main__link={"main__link"} />) : null}
                     {frags ? (<Fragments id={frags[1]._id} title={frags[1].title} miniature={frags[1].miniature} main={'main'} main__title={'main__title'} logoBougTrunc={'logo'} main__link={"main__link"}/>) : null}
                     </Container>
-                    <ShopCase />
+                    <ArtistsList />
+                    {/* <ShopCase /> */}
                     <Footer /> 
-                </div>)
+                </div>
             </>
     )
 }

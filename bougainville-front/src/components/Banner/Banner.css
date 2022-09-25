@@ -24,6 +24,13 @@
   width: 50px; }
 
 .navBar {
-  background-color: black !important; }
+  background-color: black !important;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 10; }
+
+.colorText {
+  color: white; }
 
 /*# sourceMappingURL=Banner.css.map */
