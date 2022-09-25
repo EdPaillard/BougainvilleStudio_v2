@@ -1,4 +1,4 @@
-FROM node:lastest as build-step
+FROM node:latest as build-step
 WORKDIR /usr/src/client
 COPY package*.json ./
 RUN npm install
