@@ -1,9 +1,13 @@
-FROM node:14
+FROM node:14 as build-step
 WORKDIR /usr/src/client
 COPY package*.json ./
 RUN npm install
 
 COPY . .
-EXPOSE 3000
 
-CMD ["npm", "start"]
+RUN npm run build
+
+FROM nginx:latest
+COPY --from=build-step /usr/src/client/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
