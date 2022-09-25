@@ -36,7 +36,7 @@ export default function Home() {
                     </Container>
                     <ShopCase />
                     <Footer /> 
-                </div>)
+                </div>
             </>
     )
 }
