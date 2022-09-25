@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACP,KAAK,EAAE,KAAK;;AAGhB,MAAO;EACH,aAAa,EAAE,IAAI",
+"sources": ["ArtistsList.scss"],
+"names": [],
+"file": "ArtistsList.css"
+}

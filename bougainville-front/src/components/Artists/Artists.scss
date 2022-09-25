@@ -1,0 +1,18 @@
+.flex {
+    &__fdr {
+        flex-direction: row !important;
+    }
+    &__fdrr {
+        flex-direction: row-reverse !important;
+    }
+} 
+
+.img_format {
+    height: 256px;
+    width: 210px !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 15px;
+}

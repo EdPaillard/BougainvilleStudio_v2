@@ -35,4 +35,12 @@
 
 .navBar {
     background-color: black !important;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.colorText {
+    color: white;
 }
