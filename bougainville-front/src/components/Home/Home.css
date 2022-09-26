@@ -4,4 +4,33 @@
 .h-100vh {
   height: 100vh; }
 
+.formatBanner {
+  position: relative; }
+  .formatBanner__img {
+    width: 100%;
+    height: calc(100vh - 150px); }
+  .formatBanner__title {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 25%;
+    height: 8%; }
+
+.presentation {
+  border-top: 4px solid white;
+  border-bottom: 4px solid white; }
+  .presentation__title {
+    color: white;
+    text-align: center; }
+
+.banner__first {
+  height: 20px;
+  background-color: #fff1a2; }
+.banner__second {
+  height: 20px;
+  background-color: #fff7cb; }
+.banner__third {
+  height: 20px;
+  background-color: #fffef6; }
+
 /*# sourceMappingURL=Home.css.map */

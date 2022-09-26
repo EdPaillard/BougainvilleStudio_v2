@@ -4,4 +4,11 @@
 .mb-2r {
   margin-bottom: 2rem; }
 
+.artists {
+  border-top: 4px solid white;
+  border-bottom: 4px solid white; }
+  .artists__title {
+    color: white;
+    text-align: center; }
+
 /*# sourceMappingURL=ArtistsList.css.map */

@@ -5,3 +5,24 @@
 .mt-5r {
     margin-top: 8rem !important;
 }
+
+.pres__text {
+    color: white;
+}
+
+.pres__image {
+    height: 100%;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    &__fdr {
+        flex-direction: row !important;
+        align-items: center;
+    }
+
+    &__fdc {
+        flex-direction: column;
+    }
+}

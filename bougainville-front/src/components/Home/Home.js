@@ -8,6 +8,7 @@ import Fragments from '../Fragments/Fragments';
 import Footer from '../Footer/Footer';
 import Presentation from '../Presentation/Presentation';
 import ArtistsList from '../ArtistsList/ArtistsList';
+import Image from 'react-bootstrap/Image';
 // import Carrousel from '../Carrousel/Carrousel';
 // import ShopCase from '../ShopCase/ShopCase';
 
@@ -31,7 +32,17 @@ export default function Home() {
     return ( <>
                 <Banner isLogged={isLogged} setIsLogged={setIsLogged} showLogin={showLogin} showRegister={showRegister} setShowLogin={setShowLogin} setShowRegister={setShowRegister} /> 
                 <div className='h-100vh'>
+                    <div className='formatBanner'>
+                        <Image src='./banniere_temp.jpg' className='formatBanner__img' />
+                        <Image src='./bougainville_title.png' className='formatBanner__title' />
+                        <div className='banner__first'></div>
+                        <div className='banner__second'></div>
+                        <div className='banner__third'></div>
+                    </div>
                     {/* <Carrousel /> */}
+                    <Container className='presentation mt-5r'>
+                        <h1 className='presentation__title p-4'>A propos de Bougainville</h1>
+                    </Container>
                     <Presentation/>
                     <Container className='flex flex__sb mt-5r'>
                     {frags ? (<Fragments id={frags[0]._id} title={frags[0].title} miniature={frags[0].miniature} main={'main'} main__title={'main__title'} logoBougTrunc={'logo'} main__link={"main__link"} />) : null}

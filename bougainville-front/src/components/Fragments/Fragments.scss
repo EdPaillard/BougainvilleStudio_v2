@@ -6,6 +6,25 @@
     box-sizing: border-box;
     overflow: hidden;
 
+    &__white {
+        border-left: 3rem solid white !important;
+    }
+    &__red {
+        border-left: 3rem solid red !important;
+    }
+    &__blue {
+        border-left: 3rem solid blue !important;
+    }
+    &__green {
+        border-left: 3rem solid green !important;
+    }
+    &__black {
+        border-left: 3rem solid black !important;
+    }
+    &__lightblue {
+        border-left: 3rem solid lightblue !important;
+    }
+
     &__mini {
         height: 100%;
         transform: scale(1.2);
@@ -24,6 +43,25 @@
         font-size: 4rem !important;
         padding-bottom: 4px;
         width: 100%;
+
+        &__white {
+            color: white;
+        }
+        &__red {
+            color: red;
+        }
+        &__blue {
+            color: blue;
+        }
+        &__green {
+            color:green;
+        }
+        &__black {
+            color:black;
+        }
+        &__lightblue {
+            color:lightblue;
+        }
     }
 
     &__link {

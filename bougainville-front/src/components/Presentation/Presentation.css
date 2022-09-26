@@ -4,4 +4,19 @@
 .mt-5r {
   margin-top: 8rem !important; }
 
+.pres__text {
+  color: white; }
+
+.pres__image {
+  height: 100%;
+  width: 100%; }
+
+.flex {
+  display: flex; }
+  .flex__fdr {
+    flex-direction: row !important;
+    align-items: center; }
+  .flex__fdc {
+    flex-direction: column; }
+
 /*# sourceMappingURL=Presentation.css.map */

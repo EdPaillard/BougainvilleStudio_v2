@@ -5,9 +5,9 @@ import Image from 'react-bootstrap/Image';
 import './Artists.css';
 
 
-function Artists({ photo, name, role, description, facebook, twitter, artstation, github, instagram, linkedin, flex__rd }) {
+function Artists({ photo, name, role, description, facebook, twitter, artstation, github, instagram, linkedin, youtube, flex__rd }) {
     return (
-        <Card className={`flex ${flex__rd} mb-5r`} bg='dark' text='light' border='light'>
+        <Card className={`flexA ${flex__rd} mb-5r`} bg='dark' text='light' border='light'>
             <Card.Img className='img_format' src={photo} />
             <Card.Body>
                 <Card.Title>
@@ -37,6 +37,9 @@ function Artists({ photo, name, role, description, facebook, twitter, artstation
                 </Card.Link> : null }
                 { linkedin ? <Card.Link href={linkedin}>
                     <Image src='/link_white.png' />
+                </Card.Link> : null }
+                { youtube ? <Card.Link href={youtube}>
+                    <Image src='/ytb.png' />
                 </Card.Link> : null }
                 </div>
             </Card.Body>

@@ -5,6 +5,18 @@
   border-left: 3rem solid white !important;
   box-sizing: border-box;
   overflow: hidden; }
+  .fragment__white {
+    border-left: 3rem solid white !important; }
+  .fragment__red {
+    border-left: 3rem solid red !important; }
+  .fragment__blue {
+    border-left: 3rem solid blue !important; }
+  .fragment__green {
+    border-left: 3rem solid green !important; }
+  .fragment__black {
+    border-left: 3rem solid black !important; }
+  .fragment__lightblue {
+    border-left: 3rem solid lightblue !important; }
   .fragment__mini {
     height: 100%;
     transform: scale(1.2);
@@ -19,6 +31,18 @@
     font-size: 4rem !important;
     padding-bottom: 4px;
     width: 100%; }
+    .fragment__title__white {
+      color: white; }
+    .fragment__title__red {
+      color: red; }
+    .fragment__title__blue {
+      color: blue; }
+    .fragment__title__green {
+      color: green; }
+    .fragment__title__black {
+      color: black; }
+    .fragment__title__lightblue {
+      color: lightblue; }
   .fragment__link {
     width: fit-content;
     height: fit-content; }
