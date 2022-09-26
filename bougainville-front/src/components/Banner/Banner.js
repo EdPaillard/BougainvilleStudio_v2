@@ -30,9 +30,9 @@ export default function Banner({ isLogged} ) {
             <Container>
                 <Navbar.Brand className='mr-20 flex flex__jcc flex__aic flex__gap1' href="/">
                 <img
-                    src="/boug_logo.png"
-                    width="48"
-                    height="48"
+                    src="/boug_logo_f.png"
+                    width="68"
+                    height="68"
                     className="d-inline-block align-top"
                     alt="Bougainville logo"
                 />{' '}

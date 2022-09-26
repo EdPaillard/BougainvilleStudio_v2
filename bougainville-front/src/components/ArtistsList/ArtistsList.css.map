@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,UAAW;EACP,KAAK,EAAE,KAAK;;AAGhB,MAAO;EACH,aAAa,EAAE,IAAI",
+"mappings": "AAAA,UAAW;EACP,KAAK,EAAE,KAAK;;AAGhB,MAAO;EACH,aAAa,EAAE,IAAI;;AAGvB,QAAS;EACL,UAAU,EAAE,eAAe;EAC3B,aAAa,EAAE,eAAe;EAC9B,eAAS;IACL,KAAK,EAAE,KAAK;IACZ,UAAU,EAAE,MAAM",
 "sources": ["ArtistsList.scss"],
 "names": [],
 "file": "ArtistsList.css"

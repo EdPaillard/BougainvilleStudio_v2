@@ -15,35 +15,40 @@ function ArtistsList() {
         {
             "Facebook": "https://www.facebook.com/edouard.paillard.5",
             "Twitter": 'https://twitter.com/Squallichon',
-            "Artstation": 'https://www.artstation.com/',
+            "Artstation": null,
             'Github': 'https://github.com/EdPaillard',
             'LinkedIn' : 'https://www.linkedin.com/in/edouard-paillard-533325105',
-            'Instagram': 'https://www.instagram.com/?hl=fr'
+            'Instagram': null,
+            'Youtube' : 'https://www.youtube.com/channel/UCWaR67JPoFNh5A8-ZjFZRig'
         },
         {
             "Facebook": "https://www.facebook.com/jules.lucciardi",
             "Twitter": 'https://twitter.com/Simon_Duval_SCP',
-            "Artstation": 'https://www.artstation.com/',
-            'Github': 'https://github.com/',
-            'LinkedIn' : 'https://www.linkedin.com',
-            'Instagram': 'https://www.instagram.com/?hl=fr'
+            "Artstation": null,
+            'Github': null,
+            'LinkedIn' : null,
+            'Instagram': 'https://www.instagram.com/jal_sound_and_voice/',
+            'Youtube' : 'https://www.youtube.com/channel/UCTXcTtgFRLpsYIY_cyYWkZg'
         },
         {
             "Facebook": "https://www.facebook.com/antoine.petiteau.35",
-            "Twitter": 'https://twitter.com/',
-            "Artstation": 'https://www.artstation.com/',
-            'Github': 'https://github.com/',
-            'LinkedIn' : 'https://www.linkedin.com',
-            'Instagram': 'https://www.instagram.com/?hl=fr'
+            "Twitter": null,
+            "Artstation": 'https://www.artstation.com/petiteau',
+            'Github': null,
+            'LinkedIn' : null,
+            'Instagram': 'https://www.instagram.com/petiteau.antoine/?hl=fr',
+            'Youtube' : null
         }
     ]
-    return (
-        <Container>
-            <h1 className='txt_color mb-2r'>Les Artistes</h1>
-            <Artists photo={'./antoine.png'} name={'Antoine PETITEAU'} role={'Directeur Artistique'} description={description[1]} facebook={socialMedias[2]['Facebook']} twitter={socialMedias[2]['Facebook']} artstation={socialMedias[2]['Artstation']} github={socialMedias[2]['Github']} instagram={socialMedias[2]['Instagram']} linkedin={socialMedias[2]['LinkedIn']} flex__rd='flex__fdr' />
-            <Artists photo={'./jules.png'} name={'Jules LUCCIARDI'} role={'Ingénieur Son'} description={description[2]} facebook={socialMedias[1]['Facebook']} twitter={socialMedias[1]['Facebook']} artstation={socialMedias[1]['Artstation']} github={socialMedias[1]['Github']} instagram={socialMedias[1]['Instagram']} linkedin={socialMedias[1]['LinkedIn']} flex__rd='flex__fdrr'/>
-            <Artists photo={'./edouard.png'} name={'Edouard PAILLARD'} role={'Auteur, Développeur'} description={description[0]} facebook={socialMedias[0]['Facebook']} twitter={socialMedias[0]['Facebook']} artstation={socialMedias[0]['Artstation']} github={socialMedias[0]['Github']} instagram={socialMedias[0]['Instagram']} linkedin={socialMedias[0]['LinkedIn']} flex__rd='flex__fdr'/>
+    return (<>
+        <Container className='artists mb-2r'>
+            <h1 className='artists__title txt_color p-4'>Les Artistes</h1>
         </Container>
+        <Container>
+            <Artists photo={'./antoine.png'} name={'Antoine PETITEAU'} role={'Directeur Artistique'} description={description[1]} facebook={socialMedias[2]['Facebook']} twitter={socialMedias[2]['Facebook']} artstation={socialMedias[2]['Artstation']} github={socialMedias[2]['Github']} instagram={socialMedias[2]['Instagram']} linkedin={socialMedias[2]['LinkedIn']} youtube={socialMedias[2]['Youtube']} flex__rd='flexA__fdr' />
+            <Artists photo={'./jules.png'} name={'Jules LUCCIARDI'} role={'Ingénieur Son'} description={description[2]} facebook={socialMedias[1]['Facebook']} twitter={socialMedias[1]['Facebook']} artstation={socialMedias[1]['Artstation']} github={socialMedias[1]['Github']} instagram={socialMedias[1]['Instagram']} linkedin={socialMedias[1]['LinkedIn']} youtube={socialMedias[1]['Youtube']} flex__rd='flexA__fdrr'/>
+            <Artists photo={'./edouard.png'} name={'Edouard PAILLARD'} role={'Auteur, Développeur'} description={description[0]} facebook={socialMedias[0]['Facebook']} twitter={socialMedias[0]['Facebook']} artstation={socialMedias[0]['Artstation']} github={socialMedias[0]['Github']} instagram={socialMedias[0]['Instagram']} linkedin={socialMedias[0]['LinkedIn']} youtube={socialMedias[0]['Youtube']} flex__rd='flexA__fdr'/>
+        </Container></>
     );
 }
 
