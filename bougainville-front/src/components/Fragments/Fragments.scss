@@ -13,7 +13,7 @@
         border-left: 3rem solid red !important;
     }
     &__blue {
-        border-left: 3rem solid blue !important;
+        border-left: 3rem solid rgb(0, 255, 255) !important;
     }
     &__green {
         border-left: 3rem solid green !important;
@@ -51,7 +51,7 @@
             color: red;
         }
         &__blue {
-            color: blue;
+            color: rgb(0, 255, 255);
         }
         &__green {
             color:green;

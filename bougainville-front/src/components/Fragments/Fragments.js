@@ -17,8 +17,6 @@ export default function Fragments({ id, title, miniature, main, main__title, mai
     'white', 'red', 'blue', 'green', 'black', 'lightblue'
   ];
 
-  console.log(borderColors);
-
   return !timeline ? (<a href={`/fragment/${id}`} className={`mb-5r fragment__link ${main__link}`} onMouseEnter={() => setFragHover('fragHover')} onMouseLeave={() => setFragHover('')}>
       <Card className={`bg-dark text-white fragment fragment__${borderColors[index]} ${main}`}>
         <Card.Img className={`fragment__mini ${fragHover}`} src={`/fragsPictures/${miniature}`} alt="Frag image" />

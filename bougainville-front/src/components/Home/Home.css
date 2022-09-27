@@ -12,25 +12,25 @@
   .formatBanner__title {
     position: absolute;
     top: 20%;
-    right: 20%;
+    right: 15%;
     width: 25%;
     height: 8%; }
 
 .presentation {
-  border-top: 4px solid white;
-  border-bottom: 4px solid white; }
+  border-top: 20px solid red;
+  border-bottom: 20px solid cyan; }
   .presentation__title {
     color: white;
     text-align: center; }
 
 .banner__first {
   height: 20px;
-  background-color: #fff1a2; }
+  background-color: red; }
 .banner__second {
   height: 20px;
-  background-color: #fff7cb; }
+  background-color: white; }
 .banner__third {
   height: 20px;
-  background-color: #fffef6; }
+  background-color: cyan; }
 
 /*# sourceMappingURL=Home.css.map */

@@ -10,7 +10,7 @@
   .fragment__red {
     border-left: 3rem solid red !important; }
   .fragment__blue {
-    border-left: 3rem solid blue !important; }
+    border-left: 3rem solid cyan !important; }
   .fragment__green {
     border-left: 3rem solid green !important; }
   .fragment__black {
@@ -36,7 +36,7 @@
     .fragment__title__red {
       color: red; }
     .fragment__title__blue {
-      color: blue; }
+      color: cyan; }
     .fragment__title__green {
       color: green; }
     .fragment__title__black {

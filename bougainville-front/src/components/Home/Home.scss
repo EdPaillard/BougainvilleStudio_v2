@@ -15,32 +15,38 @@
     &__title {
         position: absolute;
         top: 20%;
-        right: 20%;
+        right: 15%;
         width: 25%;
         height: 8%;
     }
 }
 
 .presentation {
-    border-top: 4px solid white;
-    border-bottom: 4px solid white;
+    // position: relative;
+    // top: 10px;
+    border-top: 20px solid rgb(255, 0, 0);
+    border-bottom: 20px solid rgb(0, 255, 255);
     &__title {
         color: white;
         text-align: center;
     }
+    // &__widget {
+    //     position: relative;
+    //     top: 10px;
+    // }
 }
 
 .banner {
     &__first {
         height: 20px;
-        background-color: rgb(255, 241, 162);
+        background-color: rgb(255, 0, 0);
     }
     &__second {
         height: 20px;
-        background-color: rgb(255, 247, 203);
+        background-color: rgb(255, 255, 255);
     }
     &__third {
         height: 20px;
-        background-color: rgb(255, 254, 246);
+        background-color: rgb(0, 255, 255);
     }
 }

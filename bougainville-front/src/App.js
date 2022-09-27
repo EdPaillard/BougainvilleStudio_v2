@@ -18,8 +18,12 @@ import Fragment from "./components/Fragment/Fragment";
 import './styles/App.css';
 
 function App() {
+
+  const handleScroll = event => {
+    console.log("player", event.currentTarget.scrollTop);
+}
   return (
-    <div className='bg-img' >
+    <div className='bg-img' onScroll={handleScroll} >
       <Routes>
         <Route exact path="/" element={<Home />} />
         {/* <Route exact path="/profile/:id" element={<Profil />} />

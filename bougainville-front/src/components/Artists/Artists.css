@@ -11,4 +11,7 @@
   position: absolute;
   bottom: 15px; }
 
+.arts__bg {
+  background-color: rgba(0, 0, 0, 0) !important; }
+
 /*# sourceMappingURL=Artists.css.map */
