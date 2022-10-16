@@ -26,12 +26,12 @@ export default function Fragment() {
 
   function setContent() {
     if(fragment.type === 'audio') {
-      return <audio src={fragment.content}></audio>    }
+      return <audio controls src={`/${fragment.content}`}></audio>    }
     else if(fragment.type === 'text') {
-      return <p>{fragment.content}</p>
+      return <p>{`/${fragment.content}`}</p>
     }
     else if(fragment.type === 'video') {
-      return <video src={fragment.content}></video>
+      return <video className='frag__content' controls src={`/${fragment.content}`}></video>
     }
     else {
       return <p>Fragment défragmenté...</p>
@@ -45,8 +45,9 @@ export default function Fragment() {
       <Container className='flex flex__jcc flex__aic mt-2r frag__container'>
       {fragment ? (<div className='text-white frag'>
         <h1 className='frag__title'>{fragment.title}</h1>
-        <p><img className='frag__image' alt='frag_miniature' src={`${fragment.miniature}`}/></p>
+        <p><img className='frag__image' alt='frag_miniature' src={`/${fragment.miniature}`}/></p>
         <p className='frag__description'>{fragment.description}</p>
+        <video src={fragment.content} ></video>
         {setContent()}
         </div>) : 
         (null)}

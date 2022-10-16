@@ -26,7 +26,7 @@ export default function Fragments({ id, title, miniature, main, main__title, mai
     setAnimationTitle('animTitleOff');
   } }>
       <Card className={`bg-dark text-white fragment fragment__${borderColors[index]} ${main}`}>
-        <Card.Img className={`fragment__mini ${fragHover}`} src={`/fragsPictures/${miniature}`} alt="Frag image" />
+        <Card.Img className={`fragment__mini ${fragHover}`} src={`/${miniature}`} alt="Frag image" />
         <Card.ImgOverlay className='fragment__overlay'>
           {logoBougTrunc ? (<img className='fragment__logoboug' alt='logo_Boug_trunc' src='/logo_boug_trunc.png' />) : null}
           {/* <Card.Title className={`fragment__title fragment__title__${borderColors[index]} ${main__title}`}><p className='fragment__para'>{title.toUpperCase()}</p></Card.Title> */}
