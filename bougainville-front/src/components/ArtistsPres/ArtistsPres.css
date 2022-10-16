@@ -1,0 +1,63 @@
+@keyframes underlineHover {
+  from {
+    transform: translateY(90%); }
+  to {
+    transform: translateY(0); } }
+@keyframes underlineHoverOff {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(90%); } }
+.homearts {
+  padding: 5vh; }
+  .homearts__preslayout {
+    position: absolute;
+    top: 0;
+    bottom: 10rem;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+  .homearts__underlinearts {
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    transform: translateY(90%);
+    position: relative; }
+  .homearts__presimg {
+    width: 100%;
+    position: relative;
+    object-fit: cover; }
+  .homearts__colarts {
+    position: relative;
+    overflow: hidden; }
+  .homearts__divunderline {
+    height: 13%;
+    position: relative;
+    bottom: 0;
+    transform: translateY(-100%);
+    overflow: hidden; }
+
+.underlineArts {
+  animation: underlineHover 300ms ease-in-out forwards; }
+
+.hoverArtsOff {
+  animation: underlineHoverOff 300ms ease-in-out forwards; }
+
+@media screen and (max-width: 991px) {
+  .homearts__colarts {
+    margin-top: 2rem !important; } }
+@media screen and (max-width: 767px) {
+  .homearts__colarts {
+    margin-top: 2rem !important;
+    padding: 0 5rem 0 5rem !important; }
+  .homearts__preslayout {
+    padding: 2.5rem 7.5rem 2.5rem 7.5rem; } }
+@media screen and (min-width: 991px) and (max-width: 1326px) {
+  .homearts__artsname {
+    font-size: 1.5rem; } }
+
+/*# sourceMappingURL=ArtistsPres.css.map */

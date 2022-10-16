@@ -40,6 +40,7 @@ export default function Banner({ isLogged} ) {
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 {/* <Navbar.Collapse id="basic-navbar-nav"> */}
                 <Nav className="me-auto">
+                    <Nav.Link href='/'><h3 className='colorText'>Accueil</h3></Nav.Link>
                     <Nav.Link href='/fragments'><h3 className='colorText'>Fragments</h3></Nav.Link>
                 </Nav>
                 {/* </Navbar.Collapse> */}

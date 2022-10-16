@@ -7,7 +7,7 @@ import './Artists.css';
 
 function Artists({ photo, name, role, description, facebook, twitter, artstation, github, instagram, linkedin, youtube, flex__rd }) {
     return (
-        <Card className={`flexA ${flex__rd} mb-5r`} bg='dark' text='light' border='light'>
+        <Card className={`flexA ${flex__rd} arts__bg mb-5r`} text='light'>
             <Card.Img className='img_format' src={photo} />
             <Card.Body>
                 <Card.Title>
