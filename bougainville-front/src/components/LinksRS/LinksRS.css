@@ -1,0 +1,70 @@
+@keyframes socialMediasUp {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-100%); } }
+@keyframes socialMediasDown {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0px); } }
+.linkRS {
+  padding: 5vh; }
+  .linkRS__linkL {
+    position: absolute;
+    height: 100%;
+    left: 22%;
+    width: 25%;
+    z-index: 6; }
+  .linkRS__linkR {
+    position: absolute;
+    height: 100%;
+    right: 22%;
+    width: 25%;
+    z-index: 6; }
+  .linkRS__linkdivL {
+    background-color: white;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    width: 25%;
+    left: 22%; }
+  .linkRS__linkdivR {
+    background-color: white;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    width: 25%;
+    right: 22%; }
+  .linkRS__linkLP {
+    position: absolute;
+    height: 100%;
+    left: 37%;
+    width: 12%;
+    z-index: 6; }
+  .linkRS__linkRP {
+    position: absolute;
+    height: 100%;
+    right: 37%;
+    width: 12%;
+    z-index: 6; }
+  .linkRS__linkdivLP {
+    background-color: white;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    width: 12%;
+    left: 37%; }
+  .linkRS__linkdivRP {
+    background-color: white;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    width: 12%;
+    right: 37%; }
+  .linkRS__linkdivHover {
+    animation: socialMediasUp 450ms ease-in-out forwards; }
+  .linkRS__linkdivHoverOff {
+    animation: socialMediasDown 300ms ease-in-out 300ms forwards; }
+
+/*# sourceMappingURL=LinksRS.css.map */

@@ -20,9 +20,23 @@ export default function Fragment() {
         axios.get(`http://162.19.66.30:5000/fragments/read/${id}`)
         .then(res => {
             console.log(res)
-            setFragment({ title: res.data.title, miniature: res.data.miniature, description: res.data.description, content: res.data.content });
+            setFragment({ title: res.data.title, miniature: res.data.miniature, description: res.data.description, content: res.data.content, type: res.data.type });
         });
     })
+
+  function setContent() {
+    if(fragment.type === 'audio') {
+      return <audio src={fragment.content}></audio>    }
+    else if(fragment.type === 'text') {
+      return <p>{fragment.content}</p>
+    }
+    else if(fragment.type === 'video') {
+      return <video src={fragment.content}></video>
+    }
+    else {
+      return <p>Fragment défragmenté...</p>
+    }
+  }
 
 
 
@@ -33,6 +47,7 @@ export default function Fragment() {
         <h1 className='frag__title'>{fragment.title}</h1>
         <p><img className='frag__image' alt='frag_miniature' src={`/fragsPictures/${fragment.miniature}`}/></p>
         <p className='frag__description'>{fragment.description}</p>
+        {setContent()}
         </div>) : 
         (null)}
       </Container>
