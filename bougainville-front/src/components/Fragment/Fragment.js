@@ -45,7 +45,7 @@ export default function Fragment() {
       <Container className='flex flex__jcc flex__aic mt-2r frag__container'>
       {fragment ? (<div className='text-white frag'>
         <h1 className='frag__title'>{fragment.title}</h1>
-        <p><img className='frag__image' alt='frag_miniature' src={`/fragsPictures/${fragment.miniature}`}/></p>
+        <p><img className='frag__image' alt='frag_miniature' src={`${fragment.miniature}`}/></p>
         <p className='frag__description'>{fragment.description}</p>
         {setContent()}
         </div>) : 

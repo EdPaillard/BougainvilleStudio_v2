@@ -21,7 +21,7 @@ export default function HomeFrags({miniature, underlineImg, fragIndex}) {
   return (
     <Col className='h-100p' onMouseEnter={() => underlineFrag()} onMouseLeave={() => underlineFrag()}>
         <Container className='homefrag__fragcont h-100p' fluid>
-            <Image className='homefrag__frag' fluid src={`fragsPictures/${miniature}`}/>
+            <Image className='homefrag__frag' fluid src={`${miniature}`}/>
             <p className='homefrag__fragcount'>#{fragIndex}</p>
             <Image className={`homefrag__underline ${hoverCSS}`} src={underlineImg} />
         </Container>
