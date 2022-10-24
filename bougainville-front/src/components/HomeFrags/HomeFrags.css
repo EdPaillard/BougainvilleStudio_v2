@@ -12,11 +12,8 @@
     color: white;
     font-size: 3rem; }
   .homefrag__underline {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    transform: translateY(90%); }
+    height: 100%;
+    width: 100%; }
   .homefrag__fragcont {
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -26,16 +23,29 @@
     animation: underline 300ms ease-in-out forwards; }
   .homefrag__hoverOff {
     animation: underlineOff 300ms ease-in-out forwards; }
+  .homefrag__divunder {
+    height: 17%;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(-10%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .homefrag__title {
+    position: absolute;
+    text-decoration: none;
+    color: white; }
 
 @keyframes underline {
   from {
-    transform: translateY(90%); }
+    transform: translateY(-10%); }
   to {
-    transform: translateY(0); } }
+    transform: translateY(-90%); } }
 @keyframes underlineOff {
   from {
-    transform: translateY(0); }
+    transform: translateY(-90%); }
   to {
-    transform: translateY(90%); } }
+    transform: translateY(-10%); } }
 
 /*# sourceMappingURL=HomeFrags.css.map */

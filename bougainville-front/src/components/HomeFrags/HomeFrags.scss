@@ -14,11 +14,8 @@
         font-size: 3rem;
     }
     &__underline {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        height: 100%;
         width: 100%;
-        transform: translateY(90%);
     }
     &__fragcont {
         padding-right: 0 !important;
@@ -33,22 +30,37 @@
     &__hoverOff {
         animation: underlineOff 300ms ease-in-out forwards;
     }
+    &__divunder {
+        height: 17%;
+        width: 100%;
+        bottom: 0;
+        transform: translateY(-10%);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        position: absolute;
+        text-decoration: none;
+        color: white;
+    }
 }
 
 @keyframes underline {
     from {
-        transform: translateY(90%);
+        transform: translateY(-10%);
     }
     to {
-        transform: translateY(0);
+        transform: translateY(-90%);
     }
 }
 
 @keyframes underlineOff {
     from {
-        transform: translateY(0);
+        transform: translateY(-90%);
     }
     to {
-        transform: translateY(90%);
+        transform: translateY(-10%);
     }
 }

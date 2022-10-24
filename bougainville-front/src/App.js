@@ -12,8 +12,8 @@ import Fragment from "./components/Fragment/Fragment";
 // import Profil from "./components/Profil/Profil";
 // import Register from "./components/Register/Register";
 // import Login from "./components/Login/Login";
-// import Admin from "./components/Admin/Admin";
-// import AdminFragEdit from "./components/AdminFragEdit/AdminFragEdit";
+import Admin from "./components/Admin/Admin";
+import AdminFragEdit from "./components/AdminFragEdit/AdminFragEdit";
 
 import './styles/App.css';
 
@@ -36,9 +36,9 @@ function App() {
         <Route exact path="/shop" element={<Shop />} />
         <Route exact path="/profil/:id" element={<Profil />} />
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/register" element={<Register />} />  */}
         <Route exact path="/admin" element={<Admin />} />
-        <Route exact path="/fragment/edit/:id" element={<AdminFragEdit />} /> */}
+        <Route exact path="/fragment/edit/:id" element={<AdminFragEdit />} />
         <Route exact path="/fragment/:id" element={<Fragment />} />
       </Routes>        
     </div>

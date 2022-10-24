@@ -48,8 +48,8 @@ export default function Home() {
                                 </Col>
                             </Row>
                             <Row className='h-50p pt-xpx'>
-                                {frags ? (<HomeFrags miniature={frags[0].miniature} underlineImg='assets/17.png' fragIndex={1}/>) : null}
-                                {frags ? (<HomeFrags miniature={frags[1].miniature} underlineImg='assets/18.png' fragIndex={2}/>) : null}
+                                {frags ? (<HomeFrags title={frags[0].title} id={frags[0]._id} miniature={frags[0].miniature} underlineImg='assets/17.png' fragIndex={1}/>) : null}
+                                {frags ? (<HomeFrags title={frags[1].title} id={frags[1]._id} miniature={frags[1].miniature} underlineImg='assets/18.png' fragIndex={2}/>) : null}
                                 {/* <Col className='h-100p' onMouseEnter={() => underlineFrag1()} onMouseLeave={() => underlineFrag1()}>
                                     <Container className='home__fragcont h-100p' fluid>
                                         <Image className='home__frag' fluid src='assets/5.png'/>
