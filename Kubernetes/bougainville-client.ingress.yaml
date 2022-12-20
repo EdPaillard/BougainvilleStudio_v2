@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bougain-client-ingress
+  labels:
+    app: ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+  namespace: bougainville
+spec:
+  rules:
+  - host: boug.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: bgc-service
+            port: 
+              number: 80

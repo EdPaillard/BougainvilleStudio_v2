@@ -1,15 +1,15 @@
-.frag {
+.fragment {
   width: 100%;
   position: relative; }
-  .frag__image {
+  .fragment__image {
     width: 100%;
     height: 240px; }
-  .frag__title {
+  .fragment__title {
     width: 100%;
     position: absolute;
     top: 10px;
     left: 10px; }
-  .frag__content {
+  .fragment__content {
     width: 100%; }
 
 /*# sourceMappingURL=Fragment.css.map */

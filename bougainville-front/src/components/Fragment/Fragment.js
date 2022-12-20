@@ -80,12 +80,15 @@ export default function Fragment() {
         {fragcontent3}
       </div>
     } else if(fragment.content2) {
+      // UNDEFINED PARCE QUE TYPE.2, TYPE.3 etc ne sont pas encore créés dans DB
+      console.log(fragment.content);
       const fragcontent2 = selectType({type: fragment.type2, frag: fragment.content2 })
       const fragcontent = selectType({type: fragment.type, frag: fragment.content, classct })
-
+      console.log(fragcontent2);
+      
       return <div>
-        {fragcontent}
-        {fragcontent2}
+        <p>{fragcontent}</p>
+        <p>{fragcontent2}</p>
       </div>
     } else {
       const fragcontent = selectType({type: fragment.type, frag: fragment.content })
