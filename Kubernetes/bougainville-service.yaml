@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bgs-service
+  labels:
+    app: bgs-service
+  namespace: bougainville
+spec:
+  selector:
+    app: boug-server
+  ports:
+    - name: http-back
+      port: 5000
+      targetPort: 5000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bgc-service
+  labels:
+    app: bgc-service
+  namespace: bougainville
+spec:
+  selector:
+      app: boug-client
+  ports:
+    - name: http-client
+      port: 80
+      targetPort: 80

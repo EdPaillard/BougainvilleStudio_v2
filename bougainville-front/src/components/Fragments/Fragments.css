@@ -1,8 +1,17 @@
+@keyframes divtitleup {
+  from {
+    transform: translateY(90%); }
+  to {
+    transform: translateY(0); } }
+@keyframes divtitledown {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(90%); } }
 .fragment {
-  height: 400px;
-  width: 400px;
+  height: 100% !important;
+  width: 100% !important;
   position: relative;
-  border-left: 3rem solid white !important;
   box-sizing: border-box;
   overflow: hidden; }
   .fragment__mini {
@@ -10,7 +19,8 @@
     transform: scale(1.2);
     transition: all 0.5s ease-in-out; }
   .fragment__container {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    height: calc(100vh - 94px); }
   .fragment__title {
     transform: rotate(90deg);
     position: absolute;
@@ -19,13 +29,28 @@
     font-size: 4rem !important;
     padding-bottom: 4px;
     width: 100%; }
+    .fragment__title__white {
+      color: white; }
+    .fragment__title__red {
+      color: red; }
+    .fragment__title__blue {
+      color: cyan; }
+    .fragment__title__green {
+      color: green; }
+    .fragment__title__black {
+      color: black; }
+    .fragment__title__lightblue {
+      color: lightblue; }
   .fragment__link {
-    width: fit-content;
-    height: fit-content; }
+    height: 30%;
+    flex: 1 0 16%;
+    margin-bottom: 1rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem; }
   .fragment__para {
-    margin-top: calc(100% - 4.5rem);
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: calc(100% - 4.5rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     width: fit-content;
     height: 100%; }
   .fragment__overlay {
@@ -33,6 +58,25 @@
     justify-content: flex-end;
     align-items: center;
     padding: 0 !important; }
+  .fragment__divtitle {
+    height: 17%;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(90%);
+    background-color: greenyellow;
+    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .fragment__newtitle {
+    color: white;
+    text-align: center; }
+
+.animTitleOn {
+  animation: divtitleup 300ms ease-in-out forwards; }
+
+.animTitleOff {
+  animation: divtitledown 300ms ease-in-out forwards; }
 
 .fragHover {
   transform: scale(1);

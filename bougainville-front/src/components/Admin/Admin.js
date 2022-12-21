@@ -16,23 +16,23 @@ import './Admin.css';
 export default function Admin() {
 
     const [id, setId] = useState(sessionStorage.getItem('id'));
-    const [admin, setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(true);
 
     const [upload, setUpload] = useState(false);
     const [put, setPut] =useState(false);
     const [trophy, setTrophy] = useState(false);
     const [scene, setScene] = useState(false);
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        axios.get(`http://162.19.66.30:5000/adminauth/${id}`)
-        .then(res => {
-            console.log(res.data);
-            if(res.data === 'ADMIN_OK') {
-                setAdmin(true);
-            }
-        })
-    }, [])
+    //     axios.get(`http://162.19.66.30:5000/adminauth/${id}`)
+    //     .then(res => {
+    //         console.log(res.data);
+    //         if(res.data === 'ADMIN_OK') {
+    //             setAdmin(true);
+    //         }
+    //     })
+    // }, [])
 
 
   return admin ? (<div className='h-100vh'>

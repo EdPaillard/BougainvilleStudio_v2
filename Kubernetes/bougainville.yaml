@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boug-server-deploy
+  labels:
+    app: boug-server
+  namespace: bougainville
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boug-server
+  template:
+    metadata:
+      labels:
+        app: boug-server
+    spec:
+      containers:
+      - name: boug-server
+        image: localhost:7000/boug_server:latest
+        ports:
+        - containerPort: 5000
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boug-client-deploy
+  labels:
+    app: boug-client
+  namespace: bougainville
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boug-client
+  template:
+    metadata:
+      labels:
+        app: boug-client
+    spec:
+      containers:
+      - name: boug-client
+        image: localhost:7000/boug_client:latest
+        ports:
+        - containerPort: 80
+
+  

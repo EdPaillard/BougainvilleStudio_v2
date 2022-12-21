@@ -1,0 +1,14 @@
+.txt_color {
+  color: white; }
+
+.mb-2r {
+  margin-bottom: 2rem; }
+
+.artists {
+  border-top: 20px solid red;
+  border-bottom: 20px solid cyan; }
+  .artists__title {
+    color: white;
+    text-align: center; }
+
+/*# sourceMappingURL=ArtistsList.css.map */
